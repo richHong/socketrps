@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket RPS</title>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/styles/styles.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+</head>
+<body class='layer'>
+
+<h1 id='title'>Socket Rock Paper Scissors</h1>
+
+<!-- Score Interface -->
+<div  id='round-container'>
+  <div id='round'>ROUND : <span id='current-round'>1</span></div>
+</div>
+<div id='p1Score-container'>
+  <div id='player1-score'>PLAYER 1 SCORE</div>
+  <div id='p1score'>0</div>
+</div>
+<div id='p2Score-container'>
+  <div id='player2-score'>PLAYER 2 SCORE</div>
+  <div id='p2score'>0</div>
+</div>
+
+<!-- Result Interface -->
+<div id='result-interface'>
+  <div>
+  <img id='hands' src='https://media.giphy.com/media/WN00WINYziSQM/giphy.gif'>
+  </div>
+  <div id='p1ch'>Player 1 Chose
+    <div id='p1Chose'>DOG</div>
+    <div id='p1Gif'></div>
+  </div>
+  <div id='p2ch'>Player 2 Chose
+    <div id='p2Chose'>CAT</div>
+    <div id='p2Gif'></div>
+  </div>
+  <p>The Result is: <span id='results'></span><p>
+</div>
+
+<!-- Username Interface -->
+<div id='user-container'>
+  <h2>Please Enter Your Name</h2>
+  <div id='replace'>
+    <form id='name'>
+      <input id='u'/><button>SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+<!-- Player 1 Game Interface -->
+<div id='player1'>
+  <h2>Player 1 Choices</h2>
+  <form>
+    <button class='p1choice' value='ROCK'>ROCK</button>
+    <button class='p1choice' value='PAPER'>PAPER</button>
+    <button class='p1choice' value='SCISSORS'>SCISSORS</button>
+  </form>
+  <div id='p1status' class='pstatus'>Awaiting choice...</div>
+</div>
+
+<!-- Player 2 Game Interface -->
+<div id='player2'>
+  <h2>Player 2 Choices</h2>
+  <form>
+    <button class='p2choice' value='ROCK'>ROCK</button>
+    <button class='p2choice' value='PAPER'>PAPER</button>
+    <button class='p2choice' value='SCISSORS'>SCISSORS</button>
+  </form>
+  <div id='p2status' class='pstatus'>Awaiting choice...</div>
+</div>
+
+<!-- Chat Interface -->
+<div id='chat-container'>
+  <h2 id='chat'>CHAT</h2>
+  <ul id="messages"></ul>
+  <form action="" id='sendMessage'>
+    <input id="m" autocomplete="off" /><button>SEND</button>
+  </form>
+</div>
+
+<!-- Trigger the modal with a button -->
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button id='winButton' type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 id="modTitle" class="modal-title"></h4>
+        </div>
+        <div id='modBody' class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button id='restartButton' type="button" class="btn btn-default" data-dismiss="modal">Restart Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Trigger the modal with a button -->
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button id='roomButton' type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#roomModal">Open Modal</button>
+  <!-- Modal -->
+  <div class="modal fade" id="roomModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 id="modTitle" class="modal-title">Welcome to Socket RPS!</h4>
+        </div>
+        <div id='modBody' class="modal-body">
+          <img id="winGif" class="modal-content" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/2000px-Rock-paper-scissors.svg.png">
+        </div>
+        <div class="modal-footer">
+          <label>Name of Room</label>
+          <input id='roomName' type='text'>
+          <button id='joinButton' type="button" class="btn btn-default" data-dismiss="modal">Join Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- App JS File -->
+<script src='app.js'></script>
+</body>
+</html>

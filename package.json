@@ -1,0 +1,25 @@
+{
+  "name": "socketrps",
+  "version": "1.0.0",
+  "description": "two player rock paper scissors and chat using socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richHong/2016-03-mvp-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richHong/2016-03-mvp-project/issues"
+  },
+  "homepage": "https://github.com/richHong/2016-03-mvp-project#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "socket.io": "^1.4.8"
+  }
+}

@@ -1,0 +1,168 @@
+#player1-score{
+  font-size: 30px;
+  float:left;
+  clear:left;
+}
+#player2-score{
+  font-size: 30px;
+  float:right;
+}
+#chat-container{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+}
+#user-container{
+  text-align: center;
+  margin: 0 auto;
+  clear: left;
+}
+#round{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30px;
+}
+#title{
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+#player1{
+  float:left;
+}
+#player2{
+  float:right;
+}
+#result-interface{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30px;
+  clear:right;
+}
+#p1Score-container{
+  clear:left;
+  float:left;
+  font-size: 30px;
+}
+#p2Score-container{
+  clear:right;
+  float:right;
+  font-size: 30px;
+}
+#round-container{
+  text-align: center;
+  margin: 0 auto;
+}
+#messages{
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 40vw;
+  height: 13vh;
+  margin: 0 auto;
+  overflow: scroll;
+  text-align: left;
+  background-color: white;
+}
+#p1ch{
+  float:left;
+}
+#p2ch{
+  float:right;
+}
+#hands{
+  position:absolute;
+  left:32.5%;
+  top:25%;
+  height: 40vh;
+}
+#p1score{
+  text-align: center;
+}
+#p2score{
+  text-align: center;
+}
+.pstatus{
+  text-align: center;
+  font-size: 20px;
+}
+#p1Gif{
+  float:right;
+}
+#p2GIf{
+  float:left;
+}
+.gif{
+  width:200px;
+  height:150px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+#u{
+  border:2px solid black;
+  width: 33vw;
+  border-radius: 10px;
+}
+#m{
+  border:2px solid black;
+  width: 35vw;
+  border-radius: 10px;
+}
+form{
+  text-align: center;
+}
+body{
+  background: url('http://media2.s-nbcnews.com/i/newscms/2016_11/1016236/rock-paper-scissors-today-tease2-160317_356b03692e9b9affad7e8b26657af6f9.jpg') no-repeat center center fixed;
+  /*background-image:url('http://www.snazzyspace.com/wallpapers/012c52_scissors-paper-rock.png');*/
+  /*background-color: #D0D0D0;*/
+  background-blend-mode: screen;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Fredoka One', cursive;
+}
+#chat{
+  margin-bottom: 5px;
+}
+button{
+  border:1px solid black;
+  border-radius: 10px;
+}
+button:focus {
+  outline: none;
+}
+li:nth-child(odd) { 
+  background: #eee; 
+}
+li {
+  list-style-type: none;
+}
+#winButton{
+  display: none;
+}
+#modTitle{
+  text-align: center;
+  font-size: 40px
+}
+#winGif{
+  text-align: center
+  margin: 0 auto;
+  width: 100%;
+  height: 65vh;
+}
+#replace{
+  font-size: 20px;
+}
+#roomButton{
+  display: none;
+}
+.p1choice{
+  font-size:25px;
+}
+.p2choice{
+  font-size:25px;
+}
+.modal-footer{
+  font-size: 20px;
+}
+
